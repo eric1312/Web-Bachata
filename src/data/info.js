@@ -12,7 +12,7 @@ export const profe = {
   instagramUser: 'Martindelvalle.ok',
   email: 'Martin.xx.delvalle@gmail.com',
   // TODO: reemplazar por el link directo a la playlist/perfil de Spotify cuando lo tengas
-  spotifyUrl: 'https://open.spotify.com/search/martin%20del%20valle',
+  spotifyUrl: 'https://open.spotify.com/user/31vvu6skgp6gqphjwxbtngjeut5e?si=f9eea11637494c04',
 }
 
 export const links = {
