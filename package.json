@@ -5,8 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/generate-seo.mjs",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "node --env-file-if-exists=.env server/index.js",
+    "start": "npm run build && npm run server"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -15,5 +18,9 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
     "vite": "^5.4.11"
+  },
+  "optionalDependencies": {
+    "msnodesqlv8": "^4.5.0",
+    "mssql": "^11.0.2"
   }
 }

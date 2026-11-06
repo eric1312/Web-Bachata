@@ -45,3 +45,29 @@ export const SpotifyIcon = ({ size = 24 }) => (
     <path d="M8 15.500c2.500-.6 5-.4 7 .8" />
   </svg>
 )
+
+export const CameraIcon = ({ size = 20 }) => (
+  <svg {...base} width={size} height={size}>
+    <path d="M4 8h3l1.500-2.500h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" />
+    <circle cx="12" cy="13" r="3.500" />
+  </svg>
+)
+
+export const CloseIcon = ({ size = 24 }) => (
+  <svg {...base} width={size} height={size}>
+    <path d="M6 6l12 12M18 6 6 18" />
+  </svg>
+)
+
+/** Flecha de navegación. direction: 'left' | 'right' */
+export const ChevronIcon = ({ size = 28, direction = 'right' }) => (
+  <svg {...base} width={size} height={size}>
+    <path d={direction === 'left' ? 'M15 5l-7 7 7 7' : 'M9 5l7 7-7 7'} />
+  </svg>
+)
+
+export const ArrowIcon = ({ size = 18 }) => (
+  <svg {...base} width={size} height={size}>
+    <path d="M5 12h14M13 6l6 6-6 6" />
+  </svg>
+)

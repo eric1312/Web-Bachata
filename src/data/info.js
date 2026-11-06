@@ -11,7 +11,7 @@ export const profe = {
   whatsappMensaje: 'Hola Martin! Quiero info sobre las clases de salsa y bachata 💃🕺',
   instagramUser: 'Martindelvalle.ok',
   email: 'Martin.xx.delvalle@gmail.com',
-  // TODO: reemplazar por el link directo a la playlist/perfil de Spotify cuando lo tengas
+  // Perfil de Spotify de Martin
   spotifyUrl: 'https://open.spotify.com/user/31vvu6skgp6gqphjwxbtngjeut5e?si=f9eea11637494c04',
 }
 

@@ -1,7 +1,8 @@
 import { horarios, links, textos } from '../data/info.js'
 import logoNegro from '../assets/logo.png'
 import salsaBachata from '../assets/salsa-bachata.png'
-import martin1 from '../assets/martin-1.png'
+import { portada } from '../data/fotos.js'
+import { CameraIcon } from './Icons.jsx'
 
 /** Calcula la próxima clase a partir de hoy y la hora actual. */
 function proximaClase(ahora = new Date()) {
@@ -26,6 +27,7 @@ export default function Hero() {
       <div className="hero__glow" aria-hidden="true" />
       <div className="container hero__grid">
         <div className="hero__copy">
+          <h1 className="sr-only">Clases de Salsa y Bachata con Martin del Valle</h1>
           <img className="hero__logo" src={logoNegro} alt="Martin del Valle" />
           <img className="hero__tag" src={salsaBachata} alt="Salsa & Bachata by Martin del Valle" />
 
@@ -50,7 +52,20 @@ export default function Hero() {
 
         <div className="hero__photo">
           <div className="hero__ring" aria-hidden="true" />
-          <img src={martin1} alt="El profe Martin del Valle" />
+          <figure className="hero__frame">
+            <img
+              src={portada.src}
+              width={portada.w}
+              height={portada.h}
+              alt={portada.alt}
+              fetchpriority="high"
+              style={{ objectPosition: portada.pos }}
+            />
+            <a className="hero__more" href="#fotos">
+              <CameraIcon size={18} />
+              Ver todas las fotos
+            </a>
+          </figure>
         </div>
       </div>
 

@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
 import logoNegro from '../assets/logo.png'
+import { CameraIcon } from './Icons.jsx'
 
 const items = [
   { href: '#que-hacemos', label: 'Qué hacemos' },
   { href: '#horarios', label: 'Horarios' },
   { href: '#objetivos', label: 'Objetivos' },
   { href: '#musica', label: 'Música' },
+  { href: '#inscripcion', label: 'Inscripción' },
   { href: '#contacto', label: 'Contacto' },
 ]
 
@@ -37,18 +39,6 @@ export default function Navbar() {
           <img src={logoNegro} alt="Martin del Valle" />
         </a>
 
-        <button
-          className="nav__toggle"
-          aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
-          aria-expanded={open}
-          aria-controls="menu"
-          onClick={() => setOpen((o) => !o)}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
-
         <nav id="menu" className="nav__menu" aria-label="Principal">
           {items.map((i) => (
             <a key={i.href} href={i.href} onClick={close}>
@@ -56,6 +46,26 @@ export default function Navbar() {
             </a>
           ))}
         </nav>
+
+        {/* Arriba a la derecha: botón de la galería (abre la pantalla de fotos) + menú en celular */}
+        <div className="nav__actions">
+          <a className="nav__fotos" href="#fotos" onClick={close}>
+            <CameraIcon />
+            <span>Fotos</span>
+          </a>
+
+          <button
+            className="nav__toggle"
+            aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
+            aria-expanded={open}
+            aria-controls="menu"
+            onClick={() => setOpen((o) => !o)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
       </div>
     </header>
   )
